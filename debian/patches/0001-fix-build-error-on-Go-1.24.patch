@@ -1,0 +1,26 @@
+From cded07e6ff26c28c1499126d14976a48cbcac749 Mon Sep 17 00:00:00 2001
+From: lhdjply <lhdjply@126.com>
+Date: Wed, 12 Nov 2025 10:11:18 +0800
+Subject: [PATCH] fix build error on Go 1.24+
+
+Signed-off-by: lhdjply <lhdjply@126.com>
+---
+ dxinput/wacom.go | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/dxinput/wacom.go b/dxinput/wacom.go
+index dd7bfa8..35fff45 100644
+--- a/dxinput/wacom.go
++++ b/dxinput/wacom.go
+@@ -251,7 +251,7 @@ func doAction(cmd string) error {
+ 	// #nosec G204
+ 	out, err := exec.Command("/bin/sh", "-c", cmd).CombinedOutput()
+ 	if err != nil {
+-		return fmt.Errorf(string(out))
++		return fmt.Errorf("%s", string(out))
+ 	}
+ 	return nil
+ }
+-- 
+2.50.1
+

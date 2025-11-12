@@ -1,0 +1,362 @@
+dde-api (6.0.29) unstable; urgency=medium
+
+  * feat: 减少构建并发 (#161)
+  * fix: Add golang-x-sys dependency for syscall operations (#160)
+  * feat: parallel build option for debian packaging (#159)
+
+ -- fuleyi <fuleyi@uniontech.com>  Fri, 10 Oct 2025 15:38:55 +0800
+
+dde-api (6.0.28) unstable; urgency=medium
+
+  * fix: 解决新装镜像创建用户后出现开机音效服务启动失败的问题 (#155)
+
+ -- fuleyi <fuleyi@uniontech.com>  Fri, 26 Sep 2025 09:20:31 +0800
+
+dde-api (6.0.27) unstable; urgency=medium
+
+  * Release 6.0.27
+
+ -- fuleyi <fuleyi@uniontech.com>  Thu, 25 Sep 2025 20:51:52 +0800
+
+dde-api (6.0.26) unstable; urgency=medium
+
+  * Release 6.0.26
+
+ -- YeShanShan <yeshanshan@uniontech.com>  Thu, 18 Sep 2025 20:01:09 +0800
+
+dde-api (6.0.25) unstable; urgency=medium
+
+  * fix: copy background image to avoid re-encoding
+  * feat: migrate from gsettings to dconfig for sound settings
+  * fix: add audio group permission to login and shutdown sound services
+  * fix: add audio group permission to sound theme player service
+
+ -- zhangkun <zhangkun2@uniontech.com>  Thu, 11 Sep 2025 20:57:19 +0800
+
+dde-api (6.0.24) unstable; urgency=medium
+
+  * fix: 解决没有关机音效的问题 (#148)
+  * feat: dde-api安全整改 (#146)
+
+ -- fuleyi <fuleyi@uniontech.com>  Thu, 21 Aug 2025 14:12:51 +0800
+
+dde-api (6.0.23) unstable; urgency=medium
+
+  * chore: bump 1st-party dependencies revision in go.mod
+
+ -- fuleyi <fuleyi@uniontech.com>  Fri, 15 Aug 2025 09:02:57 +0800
+
+dde-api (6.0.22) unstable; urgency=medium
+
+  * fix(dde-open): Fix dde open crash issue
+
+ -- YeShanShan <yeshanshan@uniontech.com>  Thu, 31 Jul 2025 19:43:39 +0800
+
+dde-api (6.0.21) unstable; urgency=medium
+
+  * chore: remove huangli and lunar calendar components
+
+ -- zhangkun <zhangkun2@uniontech.com>  Fri, 18 Jul 2025 11:07:14 +0800
+
+dde-api (6.0.20) unstable; urgency=medium
+
+  * fix: remove Install sections from systemd sound services
+  * Revert "chore: prohibit the startup and auto start of some services"
+  * chore: prohibit the startup and auto start of some services
+
+ -- zhangkun <zhangkun2@uniontech.com>  Wed, 16 Jul 2025 14:23:40 +0800
+
+dde-api (6.0.19) unstable; urgency=medium
+
+  * feat: use `deepin-immutable-ctrl` to wrap and call `locale-gen`
+
+ -- zhangkun <zhangkun2@uniontech.com>  Mon, 23 Jun 2025 21:06:19 +0800
+
+dde-api (6.0.18) unstable; urgency=medium
+
+  * feat: implement keyboard device management (#134)
+
+ -- fuleyi <fuleyi@uniontech.com>  Wed, 04 Jun 2025 15:40:30 +0800
+
+dde-api (6.0.17) unstable; urgency=medium
+
+  * refactor: migrate from deepin-api-device to deepin-daemon user
+  * chore: bump version to 6.0.16 (#130)
+  * fix: ps2触控板有事件上报，但是无法使用 (#128)
+
+ -- zhangkun <zhangkun2@uniontech.com>  Thu, 29 May 2025 11:12:54 +0800
+
+dde-api (6.0.16) unstable; urgency=medium
+
+  *  fix: ps2触控板有事件上报，但是无法使用 (#128)
+
+ -- fuleyi <fuleyi@uniontech.com>  Thu, 09 Jan 2025 10:09:22 +0800
+
+dde-api (6.0.15) unstable; urgency=medium
+
+  * fix: get 'libinput Accel Profiles Available' failed
+  * chore: ignore the error of getLastUser 
+
+ -- zsien <quezhiyong@deepin.org>  Thu, 26 Dec 2024 13:39:45 +0800
+
+dde-api (6.0.14) unstable; urgency=medium
+
+  * feat: add new grub theme (linuxdeepin#122)
+
+ -- fuleyi <fuleyi@uniontech.com>  Fri, 18 Oct 2024 14:42:20 +0800
+
+dde-api (6.0.13) unstable; urgency=medium
+
+  * feat: add new grub theme.
+
+ -- xinpeng.wang <wangxinpeng@uniontech.com>  Wed, 25 Sep 2024 11:15:16 +0800
+
+dde-api (6.0.12) unstable; urgency=medium
+
+  * fix: no logout sound (linuxdeepin/developer-center#9370)
+
+ -- zsien <quezhiyong@deepin.org>  Thu, 20 Jun 2024 17:01:04 +0800
+
+dde-api (6.0.11) unstable; urgency=medium
+
+  * feat: support trash and computer scheme(Issue: https://github.com/linuxdeepin/developer-center/issues/8266)
+
+ -- Yixue Wang <wangyixue@deepin.org>  Mon, 06 May 2024 16:53:02 +0800
+
+dde-api (6.0.10) unstable; urgency=medium
+
+  * fix: no shutdown sound
+
+ -- zsien <quezhiyong@deepin.org>  Wed, 27 Mar 2024 14:34:43 +0800
+
+dde-api (6.0.9) unstable; urgency=medium
+
+  * because 6.0.8 is not integrate to deepin, so the important fix is not in,
+  * so we think we would better make a new tag
+  * commit is : https://github.com/linuxdeepin/dde-api/commit/c39c19c4ffee35a76d46fe9e103f982dc3cecbd6
+
+ -- chenhongtao <chenhongtao@deepin.org>  Wed, 29 Nov 2023 15:32:08 +0800
+
+dde-api (6.0.8) unstable; urgency=medium
+
+  * fix: dde-api error when use old am
+  * chore: switch dep from libfreetype6 to freetype
+
+ -- chenhongtao <chenhongtao@deepin.org>  Mon, 27 Nov 2023 09:33:19 +0800
+
+dde-api (6.0.7) unstable; urgency=medium
+
+  * fix: 关机音效存在杂音
+  * chore: add gen.go support
+  * chore: 统一x11和wayland下移动速度值
+
+ -- dengbo <dengbo@uniontech.com>  Tue, 16 May 2023 10:54:05 +0800
+
+dde-api (6.0.6) unstable; urgency=medium
+
+  [ TagBuilder ]
+  * remove install packages of fcitx
+
+ -- chenhongtao <chenhongtao@uniontech.com>  Fri, 31 Mar 2023 14:59:52 +0800
+
+dde-api (6.0.5) unstable; urgency=medium
+
+  [ TagBuilder ]
+  * release dde-api 6.0.5
+
+ -- dengbo <dengbo@uniontech.com>  Wed, 29 Mar 2023 16:38:52 +0800
+
+dde-api (6.0.4) unstable; urgency=medium
+
+  [ TagBuilder ]
+  * fix: grub2主题配置不生效(Task: 177439)(Influence: grub主题)
+
+ -- zhaoyingzhen <zhaoyingzhen@uniontech.com>  Thu, 29 Dec 2022 14:59:32 +0800
+
+dde-api (6.0.3) unstable; urgency=medium
+
+  [ TagBuilder ]
+  * feat: 接口更变，增加V23接口(Task: 207483)(Influence: 接口更变)
+
+ -- zhaoyingzhen <zhaoyingzhen@uniontech.com>  Tue, 13 Dec 2022 18:40:51 +0800
+
+dde-api (6.0.2) unstable; urgency=medium
+
+  * release 6.0.2
+
+ -- <lvpeilong@uniontech.com>  Wed, 19 Oct 2022 11:24:27 +0800
+
+dde-api (6.0.1) unstable; urgency=medium
+
+  [ cxr@cxr-PC ]
+  * UNRELEASED
+
+ -- caixiangrong <caixiangrong@uniontech.com>  Mon, 25 Jul 2022 14:06:59 +0800
+
+dde-api (6.0.0.1) unstable; urgency=medium
+
+ * 6.0.0.1 Modified go-lib to trigger DDE-API synchronously
+
+ --  <lixi@uniontech.com>  Mon, 25 Jul 2022 07:25:57 +0800
+
+dde-api (6.0.0.0) UNRELEASED; urgency=medium
+
+  * 6.0.0.0 pre-release
+
+ --  <tanfeng@uniontech.com>  Wed, 01 Jun 2022 11:21:57 +0800
+
+dde-api (3.0.10-1) unstable; urgency=low
+
+  * Autobuild Tag 3.0.10 
+
+ -- TagBuilder <tagbuilder@deepin.com>  Fri, 12 Aug 2016 18:44:23 +0000
+
+dde-api (3.0.9-1) stable; urgency=low
+
+  * Autobuild Tag 3.0.9 
+
+ -- TagBuilder <tagbuilder@deepin.com>  Fri, 22 Jul 2016 07:46:10 +0000
+
+dde-api (3.0.8-1) stable; urgency=low
+
+  * Autobuild Tag 3.0.8 
+
+ -- TagBuilder <tagbuilder@linuxdeepin.com>  Mon, 23 May 2016 09:59:54 +0000
+
+dde-api (3.0.6-2) stable; urgency=low
+
+  * Rebuild Version 3.0.6 
+
+ -- TagBuilder <tagbuilder@linuxdeepin.com>  Thu, 21 Apr 2016 16:15:45 +0000
+
+dde-api (3.0.6-1) stable; urgency=low
+
+  * Autobuild Tag 3.0.6 
+
+ -- TagBuilder <tagbuilder@linuxdeepin.com>  Mon, 22 Feb 2016 16:28:16 +0000
+
+dde-api (3.0.3-2) stable; urgency=low
+
+  * Rebuild Version 3.0.3 
+
+ -- TagBuilder <tagbuilder@linuxdeepin.com>  Mon, 25 Jan 2016 17:32:14 +0000
+
+dde-api (3.0.3-1) stable; urgency=low
+
+  * Autobuild Tag 3.0.3 
+
+ -- TagBuilder <tagbuilder@linuxdeepin.com>  Fri, 22 Jan 2016 19:13:46 +0000
+
+dde-api (3.0.1-2) stable; urgency=low
+
+  * Rebuild Version 3.0.1 
+
+ -- TagBuilder <tagbuilder@linuxdeepin.com>  Tue, 12 Jan 2016 20:06:40 +0000
+
+dde-api (3.0.1-1) stable; urgency=low
+
+  * Autobuild Tag 3.0.1 
+
+ -- TagBuilder <tagbuilder@linuxdeepin.com>  Tue, 29 Dec 2015 21:10:42 +0000
+
+dde-api (3.0.0-1) stable; urgency=low
+
+  * Autobuild Tag 3.0.0 
+
+ -- TagBuilder <tagbuilder@linuxdeepin.com>  Mon, 28 Dec 2015 20:27:21 +0000
+
+dde-api (2.92.4-4) stable; urgency=low
+
+  * Rebuild Version 2.92.4 
+
+ -- TagBuilder <tabbuilder@linuxdeepin.com>  Sun, 20 Dec 2015 12:21:30 +0000
+
+dde-api (2.92.4-3) stable; urgency=low
+
+  * Rebuild Version 2.92.4 
+
+ -- TagBuilder <tabbuilder@linuxdeepin.com>  Sat, 19 Dec 2015 15:40:07 +0000
+
+dde-api (2.92.4-2) stable; urgency=low
+
+  * Rebuild Version 2.92.4 
+
+ -- TagBuilder <tabbuilder@linuxdeepin.com>  Sat, 19 Dec 2015 15:06:24 +0000
+
+dde-api (2.92.4-1) stable; urgency=low
+
+  * Autobuild Tag 2.92.4 
+
+ -- TagBuilder <tabbuilder@linuxdeepin.com>  Sat, 19 Dec 2015 12:41:55 +0000
+
+dde-api (2.92.3-2) stable; urgency=low
+
+  * Rebuild Version 2.92.3 
+
+ -- TagBuilder <tabbuilder@linuxdeepin.com>  Thu, 10 Dec 2015 21:16:42 +0000
+
+dde-api (2.92.3-1) stable; urgency=low
+
+  * Autobuild Tag 2.92.3 
+
+ -- TagBuilder <tabbuilder@linuxdeepin.com>  Thu, 10 Dec 2015 20:21:19 +0000
+
+dde-api (2.92.2-2) stable; urgency=low
+
+  * Rebuild Version 2.92.2 
+
+ -- TagBuilder <tabbuilder@linuxdeepin.com>  Wed, 09 Dec 2015 21:46:32 +0000
+
+dde-api (2.92.2-1) stable; urgency=low
+
+  * Autobuild Tag 2.92.2 
+
+ -- TagBuilder <tabbuilder@linuxdeepin.com>  Wed, 09 Dec 2015 21:35:52 +0000
+
+dde-api (2.92.1-4) stable; urgency=low
+
+  * Rebuild Version 2.92.1 
+
+ -- TagBuilder <tabbuilder@linuxdeepin.com>  Wed, 09 Dec 2015 07:19:10 +0000
+
+dde-api (2.92.1-3) stable; urgency=low
+
+  * Rebuild Version 2.92.1 
+
+ -- TagBuilder <tabbuilder@linuxdeepin.com>  Wed, 09 Dec 2015 07:12:50 +0000
+
+dde-api (2.92.1-2) stable; urgency=low
+
+  * Rebuild Version 2.92.1 
+
+ -- TagBuilder <tabbuilder@linuxdeepin.com>  Mon, 23 Nov 2015 10:22:14 +0000
+
+dde-api (2.92.1-1) stable; urgency=low
+
+  * Autobuild Tag 2.92.1 
+
+ -- TagBuilder <tabbuilder@linuxdeepin.com>  Fri, 20 Nov 2015 09:14:36 +0000
+
+dde-api (2.91.0-2) unstable; urgency=medium
+
+  * add dde-api-dbg packages. 
+
+ -- Deepin Packages Builder <packages@linuxdeepin.com>  Thu, 06 Aug 2015 14:24:18 +0800
+
+dde-api (2.91.0-1) stable; urgency=low
+
+  * Autobuild Tag 2.91.0 
+
+ -- TagBuilder <tabbuilder@linuxdeepin.com>  Thu, 06 Aug 2015 09:57:09 +0000
+
+dde-api (2.90.0-1) stable; urgency=low
+
+  * Autobuild Tag 2.90.0-1 
+
+ -- TagBuilder <tabbuilder@linuxdeepin.com>  Tue, 30 Jun 2015 10:52:03 +0000
+
+dde-api (0.0.0) unstable; urgency=medium
+
+  * Unstable release.
+
+ -- 宋文武 <songwenwu@linuxdeepin.com>  Thu, 04 Dec 2014 12:47:55 +0800

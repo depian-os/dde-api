@@ -1,0 +1,15 @@
+[main]
+host = https://www.transifex.com
+
+[o:linuxdeepin:p:deepin-desktop-environment:r:dde-api-locale-helper-policyts]
+file_filter = misc/ts/org.deepin.dde.locale-helper.policy/policy_<lang>.ts
+source_file = misc/ts/org.deepin.dde.locale-helper.policy/policy.ts
+source_lang = en
+type = QT
+
+[o:linuxdeepin:p:deepin-desktop-environment:r:dde-api-device-unblock-bt-devices-policyts]
+file_filter = misc/ts/org.deepin.dde.device.unblock-bluetooth-devices.policy/policy_<lang>.ts
+source_file = misc/ts/org.deepin.dde.device.unblock-bluetooth-devices.policy/policy.ts
+source_lang = en
+type = QT
+

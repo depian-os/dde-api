@@ -1,0 +1,44 @@
+[Unit]
+Description=Deepin shutdown sound
+Requisite=
+Wants=sound.target local-fs.target
+After=sound.target local-fs.target
+Conflicts=shutdown.target
+Before=shutdown.target
+
+[Service]
+Type=simple
+User=deepin-daemon
+SupplementaryGroups=audio
+Environment=HOME=/var/lib/deepin-sound-player
+ExecStart=/usr/bin/true
+ExecStop=/usr/lib/deepin-api/deepin-shutdown-sound
+RemainAfterExit=yes
+TimeoutStopSec=7s
+
+StateDirectory=deepin-sound-player
+BindReadOnlyPaths=-/tmp/deepin-shutdown-sound.json
+
+DeviceAllow=char-alsa rw
+DevicePolicy=closed
+
+ProtectSystem=full
+ProtectHome=yes
+PrivateTmp=yes
+#PrivateDevices=yes
+PrivateNetwork=yes
+ProtectHostname=yes
+ProtectClock=yes
+ProtectKernelTunables=yes
+ProtectKernelModules=yes
+ProtectKernelLogs=yes
+ProtectControlGroups=yes
+RestrictAddressFamilies=AF_UNIX
+RestrictNamespaces=yes
+LockPersonality=yes
+RestrictRealtime=yes
+RestrictSUIDSGID=yes
+RemoveIPC=yes
+
+[Install]
+WantedBy=graphical.target

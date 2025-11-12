@@ -1,0 +1,45 @@
+[Unit]
+Description=Deepin Locale Helper
+
+# Ask for the dbus socket.
+Wants=dbus.socket
+After=dbus.socket
+
+[Service]
+Type=dbus
+BusName=org.deepin.dde.LocaleHelper1
+ExecStart=/usr/lib/deepin-api/locale-helper
+
+ReadWritePaths=/etc/default/locale
+ReadWritePaths=/etc/locale.gen
+
+# Temporary workaround: ReadWritePaths conflicts with deepin-immutable-ctl
+# TODO: Remove this comment when immutable system wraps locale-gen properly
+# ReadWritePaths=/usr/lib/locale/
+
+DevicePolicy=closed
+
+ProtectSystem=strict
+ProtectHome=yes
+PrivateTmp=yes
+PrivateDevices=yes
+PrivateNetwork=yes
+ProtectHostname=yes
+ProtectClock=yes
+ProtectKernelTunables=yes
+ProtectKernelModules=yes
+ProtectKernelLogs=yes
+ProtectControlGroups=yes
+RestrictAddressFamilies=AF_UNIX
+
+# Need to call /usr/sbin/deepin-immutable-ctl command
+# TODO: Remove this comment when immutable system wraps locale-gen properly
+# RestrictNamespaces=yes
+
+LockPersonality=yes
+RestrictRealtime=yes
+RestrictSUIDSGID=yes
+RemoveIPC=yes
+
+[Install]
+Alias=dbus-org.deepin.dde.LocaleHelper1.service
